@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Project 3 PDO</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+        </script>
+    </head>
+
+    <body>
+        <h1 align="center">Project 3 PDO</h1>
+        <hr/>
+
+        <form id="addRecord" action="AddRecord.php" method="POST"
+                enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="description">Add a Record</label>
+                <input type="text" class="form-control" id="description"
+                        name="description" placeholder="Add description">
+                <input type=submit value="Add Record">
+            </div>
+        </form>
+        <br/>
+        <form id="readAll" action="ReadAll.php" method="POST"
+                enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Read All Records</label><br/>
+                <input type=submit value="Read All">
+            </div>
+        </form>
+        <br/>
+        <form id="read" action="Read.php" method="POST"
+                enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="id">Read a Record</label><br/>
+                <input type="number" name="id" id="id">
+                <br/>
+                <input type=submit value="Read">
+            </div>
+        </form>
+        <br/>
+        <h5>Update a Record</h5>
+        <form id="update" action="Update.php" method="POST"
+                enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="id">ID</label><br/>
+                <input type="number" name="id" id="id"><br/>
+                <label for="desc">Description</label><br/>
+                <input type="text" name="desc" id="desc">
+                <br/>
+                <input type=submit value="Update Record">
+            </div>
+        </form>
+        <br/>
+        <form id="delete" action="Delete.php" method="POST"
+                enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="id">Delete a Record</label><br/>
+                <input type="number" name="id" id="id"><br/>
+                <br/>
+                <input type=submit value="Delete Record">
+            </div>
+        </form>
+    </body>
+</html>
